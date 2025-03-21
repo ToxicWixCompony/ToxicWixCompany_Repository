@@ -1,0 +1,1061 @@
+@font-face {
+    font-family: vazirmatn;
+    src: url(../fonts/Vazirmatn-Medium.ttf);
+}
+
+@font-face {
+    font-family: lotus;
+    src: url(/fonts/BLOTUS.TTF);
+}
+
+@font-face {
+    font-family: Digi;
+    src: url(/fonts/BKOODB.TTF);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    gap: 0px;
+    border: none;
+    box-sizing: border-box;
+    font-family: "vazirmatn", "Digi", "lotus";
+}
+
+body {
+    height: 100vh;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    transition: none;
+}
+
+body.light {
+    background: repeating-linear-gradient(to bottom right, hsl(0, 0%, 93%), hsl(0, 0%, 83%), hsl(0, 0%, 93%), hsl(0, 0%, 83%));
+    color: black;
+    --header-background-color: hsl(0, 0%, 95%);
+    --header-color: black;
+    --nav-a--button-color: black;
+    --aside-border: 2px solid hsl(0, 0%, 10%);
+    --open-close-aside--hover-brightness: brightness(0.3);
+    --aside-button-color: black;
+    --aside-button--hover-color: white;
+    --aside-button--hover-background-color: hsl(0, 0%, 10%);
+    --profileBtn-active-background-color: hsl(0, 0%, 10%);
+    --profileBtn-active-color: white;
+    --aside-changemode-background-image: url(../assets/darkmode.png);
+    --main-section-brightness: brightness(0.9);
+    --showbox-container-input-background-color: hsla(0, 0%, 60%, 0.7);
+    --showbox-container-input-color: black;
+    --showbox-container-input-changing-color: white;
+    --showbox-container-input-changing-background-color: black;
+    --section-profile-button-changing: darkgreen;
+    --changedPlrofileDetails-color: darkgreen;
+    --footer-bacckground-color: hsl(0, 0%, 95%);
+    --footer-color: black;
+    --LoginForm-background-color: hsl(0, 0%, 80%);
+    --LoginPage-h1-color: hsl(0, 0%, 20%);
+    --LoginForm--after--before-background-color: conic-gradient(from -45deg, transparent, darkgreen, transparent, darkgreen, transparent);
+    --LoginForm-label-color: hsl(0, 0%, 40%);
+    --LoginForm-input-color: black;
+    --LoginForm-input-border: 1px solid black;
+    --product-backdrop: contrast(0.75);
+    --product-border: 2px solid hsla(0, 0%, 24%, 0.5);
+    --loginpage-button-color: black;
+    --loginpage-button-border: 2px solid black;
+    --LPc--Btn-background-color: hsla(0, 0%, 100%, 0.7);
+    --LPcontainer-border: 2px solid black;
+    --LoginPage-backdrop: contrast(0.2);
+    --loginpage-container-form-color: black;
+    --loginpage-container-form-label-color: hsl(0, 0%, 20%);
+    --loginpage-container-form-input-color: black;
+    --loginpage-container-form-input-border: 1.5px solid hsl(0, 0%, 5%);
+    --password-button-color: black;
+    --login-into-background-color: hsl(0, 0%, 10%);
+    --login-into-color: white;
+    --toggel-container-color: white;
+    --toggel-container-background-color: black;
+    --site-img-icon: url(../assets/TWCiconlight.png);
+    --product-text-box-h2-color: hsl(0, 0%, 25%);
+    --product-text-box-nav-strong-color: hsl(0, 0%, 80%);
+    --product-text-box-nav-backdrop: repeating-linear-gradient(to bottom right, hsl(0, 0%, 15%), hsl(0, 0%, 10%), hsl(0, 0%, 15%), hsl(0, 0%, 5%));
+    --section-shop-strong-color: hsl(0, 0%, 20%);
+    --product-text-box-button-background-color: repeating-linear-gradient(to bottom right, hsl(0, 0%, 25%), hsl(0, 0%, 15%), hsl(0, 0%, 25%), hsl(0, 0%, 15%));
+    --product-text-box-button-color: white;
+    --product-pic-box-box-shadow: 0 0 12px hsla(0, 0%, 5%, 0.75);
+    --section-scrollbar-track-background-color: hsl(0, 0%, 15%);
+    --section-scrollbar-thumb-background-color: hsl(0, 0%, 70%);
+    --section-scrollbar-thumb--hover-background-color: hsl(0, 0%, 80%);
+    --section-scrollbar-thumb--active-background-color: hsl(0, 0%, 70%);
+}
+
+
+body.black {
+    background: repeating-linear-gradient(to bottom right, hsl(0, 0%, 10%), hsl(0, 0%, 5%), hsl(0, 0%, 10%), hsl(0, 0%, 5%));
+    color: white;
+    --header-background-color: hsl(0, 0%, 5%);
+    --header-color: whitesmoke;
+    --nav-a--button-color: white;
+    --aside-border: 2px solid white;
+    --open-close-aside--hover-brightness: brightness(2);
+    --aside-button-color: white;
+    --aside-button--hover-color: black;
+    --aside-button--hover-background-color: white;
+    --profileBtn-active-background-color: white;
+    --profileBtn-active-color: black;
+    --aside-changemode-background-image: url(../assets/lightmode.png);
+    --main-section-brightness: brightness(1.5);
+    --showbox-container-input-background-color: hsla(0, 0%, 20%, 0.7);
+    --showbox-container-input-color: white;
+    --showbox-container-input-changing-color: black;
+    --showbox-container-input-changing-background-color: white;
+    --section-profile-button-changing: tomato;
+    --changedPlrofileDetails-color: lightgreen;
+    --footer-bacckground-color: hsl(0, 0%, 5%);
+    --footer-color: whitesmoke;
+    --LoginForm-background-color: hsl(0, 0%, 10%);
+    --LoginPage-h1-color: whitesmoke;
+    --LoginForm--after--before-background-color: conic-gradient(from 45deg, transparent, darkblue, transparent, darkblue, transparent);
+    --LoginForm-label-color: hsl(0, 0%, 60%);
+    --LoginForm-input-color: white;
+    --LoginForm-input-border: 1px solid white;
+    --product-backdrop: contrast(0.92);
+    --product-border: 2px solid hsla(0, 0%, 80%, 0.5);
+    --loginpage-button-color: white;
+    --loginpage-button-border: 2px solid white;
+    --LPc--Btn-background-color: hsla(0, 0%, 14%, 0.25);
+    --LPcontainer-border: 2px solid white;
+    --LoginPage-backdrop: brightness(0.05);
+    --loginpage-container-form-color: white;
+    --loginpage-container-form-label-color: hsl(0, 0%, 40%);
+    --loginpage-container-form-input-color: white;
+    --loginpage-container-form-input-border: 1.5px solid whitesmoke;
+    --password-button-color: white;
+    --login-into-background-color: white;
+    --login-into-color: black;
+    --toggel-container-color: black;
+    --toggel-container-background-color: white;
+    --site-img-icon: url(../assets/TWCicondark.png);
+    --product-text-box-h2-color: hsl(0, 0%, 85%);
+    --product-text-box-nav-strong-color: hsl(0, 0%, 30%);
+    --product-text-box-nav-backdrop: repeating-linear-gradient(to bottom right, hsl(0, 0%, 93%), hsl(0, 0%, 83%), hsl(0, 0%, 93%), hsl(0, 0%, 83%));
+    --product-text-box-button-background-color: repeating-linear-gradient(to bottom right, hsl(0, 0%, 83%), hsl(0, 0%, 63%), hsl(0, 0%, 83%), hsl(0, 0%, 63%));
+    --product-text-box-button-color: hsl(0, 0%, 15%);
+    --product-pic-box-box-shadow: 0 0 15px hsla(0, 0%, 60%, 0.75);
+    --section-scrollbar-track-background-color: hsl(0, 0%, 90%);
+    --section-scrollbar-thumb-background-color: hsl(0, 0%, 15%);
+    --section-scrollbar-thumb--hover-background-color: hsl(0, 0%, 10%);
+    --section-scrollbar-thumb--active-background-color: hsl(0, 0%, 15%);
+    --section-shop-strong-color: hsl(0, 0%, 80%);
+}
+
+*::selection {
+    background-color: hsl(0, 0%, 21%);
+    color: hsl(120, 100%, 34%);
+}
+
+
+header {
+    background-color: var(--header-background-color);
+    color: var(--header-color);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header h2::selection {
+    color: hsl(0, 80%, 55%);
+    background-color: transparent;
+}
+
+
+.headerfake {
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+}
+
+header span {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    font-size: 1em;
+    margin-right: 15px;
+}
+
+nav a,
+nav button {
+    background-color: transparent;
+    color: var(--nav-a--button-color);
+    border: none;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-right: 1px dashed hsl(0, 0%, 20%);
+    cursor: pointer;
+}
+
+
+body nav a:hover,
+body nav button:hover {
+    color: hsl(0, 0%, 60%);
+}
+
+.site_icon-container {
+    background-image: var(--site-img-icon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - 120px);
+    background-color: transparent;
+    overflow-y: auto;
+}
+
+aside {
+    border: var(--aside-border);
+    margin-top: 10px;
+    margin-right: 5px;
+    float: right;
+    background-color: transparent;
+    padding: 5px 5px;
+    border-radius: 15px;
+    height: calc(100vh - 140px);
+    position: relative;
+}
+
+
+aside.close {
+    transition: width 0.6s ease-in;
+    width: 50px;
+    padding: 5px 5px;
+    text-align: center;
+}
+
+aside.open {
+    transition: width 0.6s ease-in, padding 0.6s ease-in;
+    width: 200px;
+    padding: 15px;
+    padding-top: 5px;
+}
+
+aside #open-close-aside {
+    background-image: url(../assets/menu.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    font-size: 0.7em;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#open-close-aside:hover {
+    transition: backdrop-filter 0.3s ease-in;
+    backdrop-filter: var(--open-close-aside--hover-brightness);
+}
+
+aside .buttons-container {
+    margin-top: 25px;
+    width: 100%;
+    min-width: 35px;
+    height: auto;
+    min-height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+aside button {
+    font-size: 0.75em;
+    transition: padding 0.6s ease-in, width 0.6s ease-in, border-radius 0.6s ease-in, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    font-weight: lighter;
+    margin-top: 5px;
+    padding: 0px 0px;
+    background-color: transparent;
+    height: auto;
+    color: var(--aside-button-color);
+    border-radius: 50%;
+    width: 35px;
+    text-align: left;
+    cursor: pointer;
+    height: 35px;
+}
+
+aside button:hover {
+    color: var(--aside-button--hover-color);
+    background-color: var(--aside-button--hover-background-color);
+}
+
+
+.profileBtn.active,
+.shopBtn.active {
+    background-color: var(--profileBtn-active-background-color);
+    color: var(--profileBtn-active-color);
+}
+
+aside.open button {
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, width 0.6s ease-in, border-radius 0.6s ease-in;
+    width: 110px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+aside .shopBtn {
+    background-image: url(../assets/icon/shopping_cart.png);
+    background-repeat: no-repeat;
+    background-size: 27px;
+    background-position: right;
+}
+
+aside .profileBtn {
+    background-image: url(../assets/icon/account_circle.png);
+    background-repeat: no-repeat;
+    background-size: 33px;
+    background-position: right;
+}
+
+aside.close .shopBtn,
+aside.close .profileBtn {
+    transition: background-position 0.6s ease-in, color 0.3s ease-in-out, background-color 0.3s ease-in-out, width 0.6s ease-in, border-radius 0.6s ease-in;
+    background-position: center;
+}
+
+body aside .changemode {
+    width: 35px;
+    height: 35px;
+    padding: 0px 0px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    background-image: var(--aside-changemode-background-image);
+    background-repeat: no-repeat;
+    background-size: 27px;
+    background-position: center;
+}
+
+.section-container {
+    position: relative;
+    margin: 10px;
+    border-radius: 15px;
+    height: calc(100vh - 140px);
+    min-width: calc(100% - 70px);
+    width: calc(100% - 70px);
+}
+
+.section-shop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+
+.section-container.close {
+    transition: transform 0.6s ease-in;
+    transform: translateX(-155px);
+}
+
+.section-container.open {
+    transition: transform 0.6s ease-in;
+}
+
+.section-shop strong {
+    padding-right: 15px;
+    color: var(--section-shop-strong-color);
+}
+
+main section {
+    text-align: right;
+    height: calc(100vh - 140px);
+    overflow-y: scroll;
+    border-radius: 15px;
+    position: absolute;
+    padding: 15px 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: transparent;
+    transform: translateX(-130%);
+
+}
+
+main section::-webkit-scrollbar {
+    width: 17px;
+}
+
+main section::-webkit-scrollbar-track {
+    background-color: var(--section-scrollbar-track-background-color);
+    border-radius: 3px;
+}
+
+main section::-webkit-scrollbar-thumb {
+    background-color: var(--section-scrollbar-thumb-background-color);
+}
+
+main section::-webkit-scrollbar-thumb:hover {
+    background-color: var(--section-scrollbar-thumb--hover-background-color);
+
+}
+
+main section::-webkit-scrollbar-thumb:active {
+    background-color: var(--section-scrollbar-thumb--active-background-color);
+}
+
+.section-container.shop .section-shop {
+    transition: transform 1s ease-in-out;
+    transform: translateX(0);
+}
+
+.section-container.profile .section-profile {
+    transition: transform 1s ease-in-out;
+    transform: translateX(0);
+}
+
+.profile-container {
+    margin-top: 10px;
+    margin-right: 20px;
+    padding: 20px 25px;
+    padding-right: 5px;
+    border-radius: 15px;
+    height: 60%;
+    max-height: 300px;
+    backdrop-filter: var(--main-section-brightness);
+
+}
+
+.showbox-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.showbox-container label {
+    text-align: left;
+    color: hsl(0, 0%, 50%);
+    font-size: 1em;
+    width: 100px;
+}
+
+.showbox-container input {
+    margin: 5px 10px;
+    background-color: transparent;
+    color: var(--showbox-container-input-color);
+    border: none;
+    border-radius: 10px;
+    padding: 5px 5px;
+    width: 230px;
+    font-size: 1.1em;
+    text-align: right;
+    outline: none;
+}
+
+.showbox-container input.changing {
+    background-color: var(--showbox-container-input-changing-background-color);
+    color: var(--showbox-container-input-changing-color);
+}
+
+.section-profile button {
+    background-color: transparent;
+    font-size: 0.8em;
+    color: hsl(0, 0%, 40%);
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.section-profile button.changing {
+    color: var(--section-profile-button-changing);
+}
+
+
+.section-profile button:hover {
+    text-decoration: underline;
+}
+
+#changedPlrofileDetails {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: var(--changedPlrofileDetails-color);
+    margin-right: 25px;
+}
+
+.product {
+    margin-top: 100px;
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.product.title-left {
+    justify-content: flex-end;
+}
+
+.product-text-box {
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    z-index: 2;
+}
+
+.product-text-box h2 {
+    color: var(--product-text-box-h2-color);
+    padding: 15px 5px;
+    font-size: 2.1rem;
+}
+
+.product-text-box nav {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30%;
+    background: var(--product-text-box-nav-backdrop);
+    padding: 20px 10px;
+    border-radius: 15px;
+}
+
+.product-text-box nav strong {
+    font-size: 1.3rem;
+    transition: color 0.6s ease-in-out;
+    line-height: 35px;
+    margin-top: 0;
+    color: var(--product-text-box-nav-strong-color);
+    padding: 10px 10px;
+}
+
+.product-text-box nav strong::after {
+    content: '«';
+    margin-left: 15px;
+    font-size: 1.3rem;
+}
+
+.product-text-box nav strong.colored {
+    transition: color 1s ease-in-out;
+    color: hsl(102, 100%, 40%);
+}
+
+.product-text-box button {
+    border: none;
+    border-radius: 7px;
+    padding: 12px 10px;
+    position: absolute;
+    background: var(--product-text-box-button-background-color);
+    color: var(--product-text-box-button-color);
+    bottom: 10%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.product-text-box button p {
+    z-index: 2;
+    font-size: 1.12rem;
+    font-weight: 700;
+    transition: transform 0.4s ease-in-out;
+}
+
+.product-text-box button span {
+    z-index: 1;
+    position: absolute;
+    font-size: 1.12rem;
+    left: 12%;
+    font-weight: 900;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.product-text-box button:hover p {
+    transition: transform 0.4s ease-in-out;
+    transform: scale(0.8, 0.8) translateX(10%);
+}
+
+.product-text-box button:hover span {
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
+.product-pic-box {
+    width: 80%;
+    max-width: 600px;
+    height: 100%;
+    max-height: 500px;
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 1;
+    border-radius: 10% 23% 5% 17%;
+    box-shadow: var(--product-pic-box-box-shadow);
+    background-clip: padding-box;
+}
+
+.product.title-left .product-pic-box {
+    right: 5%;
+    left: auto;
+    border-radius: 17% 10% 23% 5%;
+}
+
+footer {
+    background-color: var(--footer-bacckground-color);
+    color: var(--footer-color);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.LoginPage {
+    transition: top 0.5s ease-in;
+    margin: 0px;
+    padding: 30px;
+    backdrop-filter: var(--LoginPage-backdrop);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: calc(-105vh);
+    left: 0;
+    /* background: linear-gradient(to right top, hsla(0, 0%, 20%, 0.4), hsla(0, 0%, 30%, 0.4), hsla(0, 0%, 20%, 0.4), hsla(0, 0%, 30%, 0.4), hsla(0, 0%, 20%, 0.4), hsla(0, 0%, 30%, 0.4)); */
+    filter: blur(60%);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LoginPage h1 {
+    position: absolute;
+    top: 8%;
+    left: 15%;
+    color: var(--LoginPage-h1-color);
+    text-shadow: 0 0 17px hsla(0, 0%, 65%, 0.748);
+}
+
+.getoutloginpageBtn,
+.change-login-type-container {
+    width: fit-content;
+    height: 50px;
+    padding: 10px 15px;
+    font-weight: 550;
+    color: var(--loginpage-button-color);
+    background: var(--LPc--Btn-background-color);
+    border: var(--loginpage-button-border);
+    border-right: none;
+    border-radius: 15px 0 0 15px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.getoutloginpageBtn:hover,
+.change-login-type-container:hover {
+    /* transition: none; */
+    border: 2px solid tomato;
+    border-right: none;
+}
+
+.change-login-type-container {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    transition: transform 1s ease-in-out;
+    transform: translate(120%, 0%);
+    opacity: 0;
+    z-index: 1;
+}
+
+.LoginPage.by-data .change-login-type-container.to-authcode {
+    transition: transform 1s ease-in-out;
+    transform: translate(0, 0);
+    opacity: 1;
+    z-index: 2;
+}
+
+.LoginPage.by-authcode .change-login-type-container.to-data {
+    transition: transform 1s ease-in-out;
+    transform: translate(0, 0);
+    opacity: 1;
+    z-index: 2;
+}
+
+.getoutloginpageBtn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.LoginPage.Active {
+    transition: top 1s ease-in-out;
+    top: calc(0vh);
+}
+
+.LPcontainer {
+    background-color: var(--LPc--Btn-background-color);
+    border: var(--LPcontainer-border);
+    height: 65%;
+    width: 70%;
+    max-width: 700px;
+    position: absolute;
+    left: 15%;
+    top: calc(8% + 60px);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.loginform-container .form {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    color: var(--loginpage-container-form-color);
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.login-by-authcode-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    z-index: 2;
+}
+
+.login-by-data-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+    opacity: 1;
+}
+
+.loginform-container .form label {
+    color: var(--loginpage-container-form-label-color);
+}
+
+.loginform-container .form input {
+    /* background-color: rgb(43, 43, 43); */
+    background-color: transparent;
+    color: var(--loginpage-container-form-input-color);
+    border: var(--loginpage-container-form-input-border);
+    width: 60%;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 7px;
+}
+
+.pass-container {
+    width: 60%;
+    position: relative;
+    margin-top: 10px;
+}
+
+#LPpasswordinput {
+    margin-top: 0px;
+    padding-left: 40px;
+    width: 100%;
+}
+
+.error-p {
+    font-weight: 550;
+    position: absolute;
+    bottom: 20%;
+    color: tomato;
+}
+
+.password-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--password-button-color);
+    position: absolute;
+    height: 100%;
+    transform: translateX(20%);
+}
+
+.login-into {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    padding: 5px 10px;
+    background-color: var(--login-into-background-color);
+    color: var(--login-into-color);
+    font-weight: 800;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.login-into:hover {
+    background-color: hsl(0, 0%, 30%);
+}
+
+.login-into:active {
+    background-color: white;
+}
+
+.LoginPage.by-authcode .loginform-container .form {
+    transition: transform 1s ease-in-out;
+    transform: translateX(-100%);
+}
+
+.LoginPage.by-data .loginform-container .form {
+    transition: transform 1s ease-in-out;
+    transform: translateX(0);
+}
+
+.LoginPage.by-authcode .login-by-data-form {
+    opacity: 0;
+    z-index: 1;
+    animation: loginbydatatoauthcode 1s;
+}
+
+.LoginPage.by-data .login-by-data-form {
+    opacity: 1;
+    z-index: 3;
+    animation: loginbydatatodata 1s;
+}
+
+.LoginPage.by-authcode .login-by-authcode-form {
+    opacity: 1;
+    animation: op-to-one 1s;
+}
+
+.LoginPage.by-data .login-by-authcode-form {
+    opacity: 0;
+    animation: op-to-zero 1s;
+}
+
+.toggel-container {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    padding-top: 40px;
+    color: var(--toggel-container-color);
+    background-color: var(--toggel-container-background-color);
+    text-align: center;
+    opacity: 1;
+    z-index: 5;
+}
+
+.toggel-container h4 {
+    color: hsl(0, 0%, 30%);
+    margin-top: 35px;
+}
+
+.toggel-container a {
+    width: fit-content;
+    color: hsl(0, 0%, 30%);
+    text-decoration: none;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.toggel-container a:hover {
+    text-decoration: underline;
+}
+
+.LoginPage.by-data .toggel-container {
+    transition: border-radius 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateX(0);
+    border-radius: 0 50px 50px 0;
+}
+
+.LoginPage.by-authcode .toggel-container {
+    transition: border-radius 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateX(100%);
+    border-radius: 50px 0 0 50px;
+}
+
+
+
+@media screen and (max-width: 770px) {
+    .showbox-container input {
+        font-size: 0.9rem;
+        width: 175px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .profile-container {
+        margin-right: 5px;
+        padding: 5px 10px;
+    }
+
+    .showbox-container {
+        margin-right: 5px;
+    }
+
+    .showbox-container label {
+        font-size: 0.8rem;
+        width: 70px;
+    }
+
+    header,
+    .headerfake {
+        height: 120px;
+        flex-direction: column;
+        padding-top: 18px;
+    }
+
+    main {
+        height: calc(100vh - 180px);
+    }
+
+    aside,
+    .section-container,
+    main section {
+        height: calc(100vh - 200px);
+    }
+}
+
+@media screen and (max-width: 1010px) {
+
+    .getoutloginpageBtn,
+    .change-login-type-container {
+        border-right: var(--loginpage-button-border);
+        border-bottom: none;
+        border-radius: 15px 15px 0 0;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .getoutloginpageBtn:hover,
+    .change-login-type-container:hover {
+        border: 2px solid tomato;
+        border-bottom: none;
+    }
+
+    .change-login-type-container {
+        bottom: 0;
+        top: auto;
+        left: 40%;
+        right: auto;
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+
+    .LoginPage.by-data .change-login-type-container.to-authcode {
+        transition: opacity 1s ease-in-out;
+        opacity: 1;
+    }
+
+    .LoginPage.by-authcode .change-login-type-container.to-data {
+        transition: opacity 1s ease-in-out;
+        opacity: 1;
+    }
+
+    .getoutloginpageBtn {
+        bottom: 0;
+        top: auto;
+        left: 10%;
+        right: auto;
+    }
+}
+
+@keyframes op-to-zero {
+
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes op-to-one {
+
+    0%,
+    49% {
+        opacity: 0;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes loginbydatatodata {
+
+    0%,
+    49% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        z-index: 3;
+        opacity: 1;
+    }
+}
+
+@keyframes loginbydatatoauthcode {
+
+    0%,
+    49% {
+        opacity: 1;
+        z-index: 3;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+        z-index: 1;
+    }
+}
