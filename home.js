@@ -111,6 +111,12 @@ function ActiveProfileSection() {
         profileBtn.classList.add("active")
     }
 
+    if (aside.classList.contains("open")) {
+        aside.classList.replace("open", "close")
+        sections.classList.replace("close", "open")
+        setTimeout(change_name2, 300)
+    }
+
 }
 function ActiveShopSection() {
     sections.classList.contains("profile") ? sections.classList.replace("profile", "shop") : {}
@@ -118,6 +124,12 @@ function ActiveShopSection() {
     if (profileBtn.classList.contains("active")) {
         profileBtn.classList.remove("active")
         shopBtn.classList.add("active")
+    }
+
+    if (aside.classList.contains("open")) {
+        aside.classList.replace("open", "close")
+        sections.classList.replace("close", "open")
+        setTimeout(change_name2, 300)
     }
 }
 
@@ -163,7 +175,7 @@ const products_data = [
             "بزودی برای شما",
             "یکی از بهترین های ما"
         ],
-        "buttontext": "منتظر باشید",
+        "buttontext": "... منتظر باشید",
         "buttonid": "goto-Tabchi-shop",
         "picurl": "./assets/section3-TabchiWix.png"
     },
@@ -171,6 +183,7 @@ const products_data = [
 for (let i = 0; i < products_data.length; i++) {
     const productdiv = document.createElement('div')
     productdiv.classList.add('product')
+    productdiv.classList.add('hide')
     productdiv.classList.add(`${products_data[i]["divclass"]}`)
     i % 2 == 0 ? productdiv.classList.add(`title-right`) : productdiv.classList.add(`title-left`)
     // productdiv.style.background = "linear-gradient(to top right, hsla(277, 100%, 50%, 0.7), hsla(250, 100%, 60%, 0.7))"
@@ -183,7 +196,8 @@ for (let i = 0; i < products_data.length; i++) {
     nav = document.createElement('nav')
     nav.classList.add('subtitles-container')
     products_data[i]['subtitle'].forEach(sub => {
-        strong = document.createElement('strong')
+        const strong = document.createElement('strong')
+        strong.setAttribute('dir', 'rtl')
         strong.textContent = sub
         strong.classList.add('subtitle')
         nav.append(strong)
@@ -204,6 +218,39 @@ for (let i = 0; i < products_data.length; i++) {
     productdiv.append(producttextdiv)
     productdiv.append(picdiv)
     sectionShop.append(productdiv)
+    const hr = document.createElement('hr')
+    hr.classList.add('hide')
+    sectionShop.append(hr)
 
 }
 
+const products = document.getElementsByClassName('product')
+const hrs = document.getElementsByTagName('hr')
+const products_length = products.length
+
+let winHeight = window.innerHeight
+if (products[0].getBoundingClientRect().top < winHeight - 185 && products[0].getBoundingClientRect().top > 0) {
+    if (products[0].classList.contains('hide')) {
+        products[0].classList.replace('hide', 'show')
+        hrs[0].classList.replace('hide', 'show')
+    }
+}
+
+sectionShop.addEventListener("scroll", () => {
+    let winHeight = window.innerHeight
+    // console.log('winH ', winHeight)
+    for (let i = 0; i < products_length; i++) {
+        let height = products[i].getBoundingClientRect().top
+        if (height < winHeight && height > 0) {
+            if (products[i].classList.contains('hide')) {
+                products[i].classList.replace('hide', 'show')
+                hrs[i].classList.replace('hide', 'show')
+            }
+        } else if (height > winHeight) {
+            if (products[i].classList.contains('show')) {
+                products[i].classList.replace('show', 'hide')
+                hrs[i].classList.replace('show', 'hide')
+            }
+        }
+    }
+})
